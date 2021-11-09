@@ -29,7 +29,7 @@ export default ({
   ** Global CSS
   */
   css: [
-    // { src: '~/assets/less/theme.less', lang: 'less' },
+    { src: '~/assets/css/tailwind.css', lang: 'css' },
     { src: '~/assets/scss/style.scss', lang: 'scss' }
   ],
 
