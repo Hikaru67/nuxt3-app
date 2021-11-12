@@ -1,5 +1,125 @@
 @import 'bootstrap';
 
+body {
+  font-family: Tahoma,sans-serif,Helvetica,Arial;
+  font-weight: 400;
+  font-size: 14px;
+  background-color: #ebebeb;
+}
 .header {
   background: url('@/assets/images/bg_header.jpg');
+  height: 50px;
+  .nav-brand {
+    display: flex;;
+  }
+  .nav-form {
+    display: flex;
+    .searchbutton {
+      background: url('@/assets/images/btn_search.png');
+      background-position: center;
+    }
+  }
+}
+
+.container {
+  @media (min-width: 1200px) {
+    width: 1030px;
+  }
+  @media (min-width: 992px) {
+    width: 970px;
+  }
+  // @media (min-width: 768px) {
+  //   width: 750px;
+  // }
+}
+
+//------------------------------------------------------------------------------------------------
+// Styles for main
+main {
+  .container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #f9f9f9;
+    .page-title {
+      margin: 0;
+      font-weight: 400;
+      font-size: 20px;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      color: #2980b9;
+    }
+
+    .items-slide {
+      position: relative;
+      margin: 0 -7px;
+      height: 240px;
+
+      .owl-carousel {
+        display: none;
+        position: relative;
+        width: 100%;
+        .owl-wrapper-outer {
+          overflow: hidden;
+          position: relative;
+          width: 100%;
+          .item {
+            margin: 0 7px;
+            position: relative;
+            height: 220px;
+            text-align: center;
+            overflow: hidden;
+          }
+        }
+
+        .owl-theme .owl-controls {
+          display: none!important;
+          margin-top: 10px;
+          text-align: center;
+        }
+
+
+      }
+
+      .slide-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 52px;
+        line-height: 25px;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 13px;
+        display: block;
+        color: #fff;
+        background-color: #000;
+        background: url(@/assets/images/bg_over.png);
+
+        h3 {
+          margin: 1px 0;
+          font-weight: 400;
+          a {
+            height: 23px;
+            overflow: hidden;
+            font-size: 15px;
+            display: block;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+        }
+        a {
+          color: #fff;
+          font-size: 13px;
+        }
+
+        .time {
+          font-size: 11px;
+          font-style: italic;
+          padding-left: 10px;
+        }
+      }
+    }
+
+
+  }
 }
