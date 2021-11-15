@@ -1,4 +1,5 @@
 @import 'bootstrap';
+@import 'utilities';
 
 body {
   font-family: Tahoma,sans-serif,Helvetica,Arial;
@@ -63,7 +64,7 @@ main {
           position: relative;
           width: 100%;
           .owl-item {
-            float: left;
+            float: left !important;
           }
           .item {
             margin: 0 7px;
@@ -120,6 +121,14 @@ main {
           font-style: italic;
           padding-left: 10px;
         }
+      }
+
+      .next {
+        right: 10px;
+        background-position: -63px -33px;
+      }
+      .prev {
+        left: 10px;
       }
     }
 

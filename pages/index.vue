@@ -1,3 +1,17 @@
+<script lang="ts">
+import SingleSlide from "~/components/templates/SingleSlide.vue";
+
+export default {
+  components: { SingleSlide },
+  layout: "default",
+};
+</script>
+
+<script lang="ts" setup>
+const { data }: { data: any } = await useFetch("/api/nettruyen");
+const listManga = data._value;
+</script>
+
 <template>
   <main>
     <div class="container">
@@ -19,104 +33,12 @@
                     style="width: 4060px; left: 0px; display: block; transition: all 1000ms ease 0s; transform: translate3d(0px, 0px, 0px);"
                   >
                     <div
+                      v-for="(manga, index) in listManga"
+                      :key="index"
                       class="owl-item"
                       style="width: 203px;"
                     >
-                      <div class="item">
-                        <a href="http://www.nettruyenpro.com/truyen-tranh/chien-hon-tuyet-the-30951">
-                          <img
-                            class="lazyOwl"
-                            src="//st.imageinstant.net/data/comics/231/chien-hon-tuyet-the.jpg"
-                            alt="Chiến Hồn Tuyệt Thế"
-                            style="display: inline;"
-                          >
-                        </a>
-                        <div class="slide-caption">
-                          <h3>
-                            <a
-                              href="http://www.nettruyenpro.com/truyen-tranh/chien-hon-tuyet-the-30951"
-                              title="Chiến Hồn Tuyệt Thế"
-                            >Chiến Hồn Tuyệt Thế</a>
-                          </h3>
-                          <a
-                            href="http://www.nettruyenpro.com/truyen-tranh/chien-hon-tuyet-the/chap-210/786358"
-                            title="Chapter 210"
-                          >Chapter 210</a>
-                          <span class="time">
-                            <i class="fa fa-clock-o">
-                            </i> 18 giờ trước</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="owl-wrapper"
-                    style="width: 4060px; left: 0px; display: block; transition: all 1000ms ease 0s; transform: translate3d(0px, 0px, 0px);"
-                  >
-                    <div
-                      class="owl-item"
-                      style="width: 203px;"
-                    >
-                      <div class="item">
-                        <a href="http://www.nettruyenpro.com/truyen-tranh/chien-hon-tuyet-the-30951">
-                          <img
-                            class="lazyOwl"
-                            src="//st.imageinstant.net/data/comics/231/chien-hon-tuyet-the.jpg"
-                            alt="Chiến Hồn Tuyệt Thế"
-                            style="display: inline;"
-                          >
-                        </a>
-                        <div class="slide-caption">
-                          <h3>
-                            <a
-                              href="http://www.nettruyenpro.com/truyen-tranh/chien-hon-tuyet-the-30951"
-                              title="Chiến Hồn Tuyệt Thế"
-                            >Chiến Hồn Tuyệt Thế</a>
-                          </h3>
-                          <a
-                            href="http://www.nettruyenpro.com/truyen-tranh/chien-hon-tuyet-the/chap-210/786358"
-                            title="Chapter 210"
-                          >Chapter 210</a>
-                          <span class="time">
-                            <i class="fa fa-clock-o">
-                            </i> 18 giờ trước</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="owl-wrapper"
-                    style="width: 4060px; left: 0px; display: block; transition: all 1000ms ease 0s; transform: translate3d(0px, 0px, 0px);"
-                  >
-                    <div
-                      class="owl-item"
-                      style="width: 203px;"
-                    >
-                      <div class="item">
-                        <a href="http://www.nettruyenpro.com/truyen-tranh/chien-hon-tuyet-the-30951">
-                          <img
-                            class="lazyOwl"
-                            src="//st.imageinstant.net/data/comics/231/chien-hon-tuyet-the.jpg"
-                            alt="Chiến Hồn Tuyệt Thế"
-                            style="display: inline;"
-                          >
-                        </a>
-                        <div class="slide-caption">
-                          <h3>
-                            <a
-                              href="http://www.nettruyenpro.com/truyen-tranh/chien-hon-tuyet-the-30951"
-                              title="Chiến Hồn Tuyệt Thế"
-                            >Chiến Hồn Tuyệt Thế</a>
-                          </h3>
-                          <a
-                            href="http://www.nettruyenpro.com/truyen-tranh/chien-hon-tuyet-the/chap-210/786358"
-                            title="Chapter 210"
-                          >Chapter 210</a>
-                          <span class="time">
-                            <i class="fa fa-clock-o">
-                            </i> 18 giờ trước</span>
-                        </div>
-                      </div>
+                      <single-slide :manga="manga" />
                     </div>
                   </div>
                 </div>
