@@ -123,6 +123,17 @@ main {
         }
       }
 
+      .next, .prev {
+        position: absolute;
+        top: 50%;
+        margin-top: -45px;
+        width: 55px;
+        height: 55px;
+        text-align: center;
+        background: url(@/assets/images/next_prev.png) no-repeat -3px -33px;
+        color: #fff;
+        text-decoration: none;
+      }
       .next {
         right: 10px;
         background-position: -63px -33px;
