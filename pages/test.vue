@@ -1,0 +1,10 @@
+<template>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14896.825722694739!2d105.79380725!3d21.02442465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab4f7e972f63%3A0x441bbabb20eaaa63!2zSMOgIMSQw7QgUGFyayBWaWV3IEFwYXJ0bWVudA!5e0!3m2!1svi!2s!4v1636545504447!5m2!1svi!2s"
+    width="600"
+    height="450"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+  ></iframe>
+</template>

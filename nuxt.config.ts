@@ -10,7 +10,7 @@ export default ({
       { hid: 'description', name: 'description', content: 'Nuxt3 app' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '@/static/favicon.ico' }
     ]
   },
 

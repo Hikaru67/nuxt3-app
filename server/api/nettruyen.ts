@@ -4,8 +4,9 @@ import * as cheerio from 'cheerio'
 
 export default async (req: IncomingMessage, res: ServerResponse) => {
 
-  const html = await $fetch('http://www.nettruyenpro.com/')
+  const html = await $fetch('http://www.nettruyengo.com/')
   const $ = cheerio.load(String(html)) // load HTML
+  console.log("data => $('.items-slide .item')", $('.items-slide .item').get())
   const data = $('.items-slide .item').map((index, el) => {
     return {
       link: $(el).find('.slide-caption a').attr('href'),
